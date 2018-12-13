@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 yyfly, Inc.
+ * Copyright (C) 2017-2018 yyfly, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -83,7 +83,7 @@ class BasicParamsInterceptor private constructor() : Interceptor {
         request = requestBuilder.build()
 
         val headers = request.headers()
-        headers?.let {
+        headers.let {
             if (HttpApp.logFlag) Log.i(TAG, "Request Headers " +
                     " \n Auth = " + it.get("Auth") +
                     " \n App-id = " + it.get("App-id") +
